@@ -1,6 +1,12 @@
 (require '[cljs.build.api :as b])
 
-(b/watch "src"
-  {:main 'resume.core
-   :output-to "out/resume.js"
-   :output-dir "out"})
+(future
+  (b/watch "src"
+           {:main 'resume.core
+            :output-to "out/resume.js"
+            :optimizations :simple
+            :output-dir "out"}))
+
+(do (require 'weasel.repl.websocket)
+    (cemerick.piggieback/cljs-repl
+     (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)))
