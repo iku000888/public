@@ -2,7 +2,8 @@
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.562"]]
+                 [org.clojure/clojurescript "1.9.562"]
+                 [crate "0.2.4"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-npm "0.6.2"]]
   :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]
