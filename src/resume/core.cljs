@@ -3,6 +3,8 @@
             [goog.dom :as gd]
             [goog.events :as ge]
             [goog.style :as gs]
+            [resume.skills :as skills]
+            [resume.summary :as summary]
             [weasel.repl :as repl]
             [clojure.string :as str]))
 
@@ -16,10 +18,10 @@
 
 (def email [:div "kanumaiku@gmail.com"])
 
-(def skills [:h3 {:id "skill-h"} "- Skills"])
-(def skills-list [:ul {:id "skill-l"}
-                  [:li "Clojure"]
-                  [:li "ClojureScript"]])
+#_(def skills [:h3 {:id "skill-h"} "- Skills"])
+#_(def skills-list [:ul {:id "skill-l"}
+                    [:li "Clojure"]
+                    [:li "ClojureScript"]])
 
 
 (def education [:h3 "+ Education"])
@@ -28,8 +30,10 @@
   [head
    email
 
-   skills
-   skills-list
+   summary/text
+
+   skills/heading
+   skills/list
 
    education])
 
@@ -51,14 +55,6 @@
 ;;Initializing
 (.appendChild js/document.head css-link)
 
-(ge/listen (.getElementById js/document "skill-h")
-           (.-CLICK ge/EventType)
-           (fn [e]
-             (toggle-expansion-state-text "skill-h")
-             (toggle-visibility "skill-l")))
-
-
-
 (defn render []
   (doseq [c content]
     (.appendChild app-div (c/html c))))
@@ -68,6 +64,16 @@
   (gd/removeChildren app-div)
   (render)
   )
+
+(re-render)
+
+(ge/listen (.getElementById js/document "skill-h")
+           (.-CLICK ge/EventType)
+           (fn [e]
+             (toggle-expansion-state-text "skill-h")
+             (toggle-visibility "skill-l")))
+
+
 
 (enable-console-print!)
 
