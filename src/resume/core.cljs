@@ -8,6 +8,7 @@
             [resume.skills :as skills]
             [resume.summary :as summary]
             [resume.talks :as talks]
+            [resume.work :as work]
             [weasel.repl :as repl]))
 
 (def css-link
@@ -38,20 +39,23 @@
              ed/listing
 
              talks/heading
-             talks/listing]]
+             talks/listing
+
+             work/heading
+             work/listing
+
+             ;;Employment history + projects + awards
+             ;;Preference
+             ;;Opensource work
+             ;;When can I quit?
+             ;;Can work in the U.S.
+             ;;Picture
+             ;;Make the margin of li ul look nicer
+             ]]
     (.appendChild app-div (c/html c)))
   (doseq [s   [skills/listen-toggle
-               ed/listen-toggle]] (s)))
+               ed/listen-toggle
+               talks/listen-toggle
+               work/listen-toggle]] (s)))
 
 (re-render)
-
-
-
-
-
-(enable-console-print!)
-
-(println "Hello world!")
-
-(when-not (repl/alive?)
-  (repl/connect "ws://localhost:9001"))

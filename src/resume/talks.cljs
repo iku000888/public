@@ -7,7 +7,7 @@
 (def listing [:div {:id "talks"}
 
               ;;TODO: Make this wrap
-              [:p (p Starting "2017," I started attending meetups and giving talks on occasions
+              [:p (p In "2017," I started giving talks at meetups/conferences
                      because I wanted to step up my game as a software engineer.
                      "(i.e. I want more people to know me and vice versa"
                      I find giving talks is a great way to re-inforce my understanding of a topic
