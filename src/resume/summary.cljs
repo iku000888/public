@@ -1,7 +1,6 @@
 (ns resume.summary
-  (:require-macros [resume.macros :refer [p]] )
-  (:require [clojure.string :as str]))
 
+  (:require-macros [resume.macros :refer [p]]))
 
 (def text
   [:div #_{:style
@@ -11,5 +10,4 @@
              "margin-top: 6em"])}
    [:h2 "Summary:"]
    [:p (p I am an engineer with a passion for
-          Clojure/ClojureScript)]
-   ])
+          Clojure/ClojureScript looking for new challenges)]])
