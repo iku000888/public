@@ -9,7 +9,8 @@
             [resume.summary :as summary]
             [resume.talks :as talks]
             [resume.work :as work]
-            [weasel.repl :as repl])
+            [weasel.repl :as repl]
+            [template.layout :as layout])
   (:require-macros [resume.css :refer [style-sheet-str]]))
 
 (defn set-style! []
@@ -35,7 +36,9 @@
 (defn re-render []
   ;;For refreshing the page content without reloading
   (gd/removeChildren app-div)
-  (doseq [c [head
+  (doseq [c [layout/layout
+
+             head
              email
 
              summary/text
@@ -53,10 +56,7 @@
              work/listing
 
              ;;Employment history + projects + awards
-             ;;Preference
              ;;Opensource work
-             ;;When can I quit?
-             ;;Can work in the U.S.
              ;;Picture
              ;;Make the margin of li ul look nicer
              ]]
