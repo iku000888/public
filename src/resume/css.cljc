@@ -7,7 +7,9 @@
   []
   (gc/css
    [:.menu {;:color "blue"
-            :border-bottom "dotted"}]
+            :border-bottom "dashed"}]
    [:.logo {:font-family "monospace"
             :font-size "2.5em"}]
-   [:.menu-item {:margin-left "1em"}]))
+   [:.menu-item {:margin-left "1em"}]
+   [:.menu-item.mouse-overed {:font-size "1.8em"
+                              :cursor "pointer"}]))

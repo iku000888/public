@@ -36,6 +36,7 @@
 (defn re-render []
   ;;For refreshing the page content without reloading
   (gd/removeChildren app-div)
+  (set-style!)
   (doseq [c [layout/layout
 
              head
@@ -61,10 +62,11 @@
              ;;Make the margin of li ul look nicer
              ]]
     (.appendChild app-div (c/html c)))
-  (doseq [s   [skills/listen-toggle
-               ed/listen-toggle
-               talks/listen-toggle
-               work/listen-toggle]] (s)))
+  (doseq [s [layout/decorate-menu-items
+             skills/listen-toggle
+             ed/listen-toggle
+             talks/listen-toggle
+             work/listen-toggle]] (s)))
 
 (re-render)
 
