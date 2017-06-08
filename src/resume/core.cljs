@@ -9,7 +9,15 @@
             [resume.summary :as summary]
             [resume.talks :as talks]
             [resume.work :as work]
-            [weasel.repl :as repl]))
+            [weasel.repl :as repl])
+  (:require-macros [resume.css :refer [style-sheet-str]]))
+
+(defn set-style! []
+  (aset js/document.head
+        "innerHTML"
+        (str "<style>"
+             (style-sheet-str)
+             "</style>")))
 
 (def css-link
   (c/html [:link {:rel "stylesheet"
@@ -59,3 +67,6 @@
                work/listen-toggle]] (s)))
 
 (re-render)
+
+(when-not (repl/alive?)
+  (repl/connect "ws://localhost:9001"))
