@@ -12,4 +12,7 @@
             :font-size "2.5em"}]
    [:.menu-item {:margin-left "1em"}]
    [:.menu-item.mouse-overed {:font-size "1.8em"
-                              :cursor "pointer"}]))
+                              :cursor "pointer"}]
+   [:th {:border-bottom "solid"}]
+   [:td {:border-bottom "dotted"}]
+   [:table {:border-spacing "1.5em"}]))

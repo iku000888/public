@@ -3,7 +3,7 @@
             [goog.events.EventType :as et]
             [goog.dom.classlist :as gc]))
 
-(def layout
+(defn layout [content]
   [:div
    [:div {:id "menu-div"
           :class "menu"}
@@ -11,7 +11,9 @@
 
     [:span.menu-item "About"]
     [:span.menu-item "Writings"]
-    [:span.menu-item "Other Web Presence"]]])
+    [:span.menu-item "Other Web Presence"]]
+   content
+   ])
 
 (defn decorate-menu-items []
   (doseq [el (array-seq (.getElementsByClassName js/document "menu-item"))]

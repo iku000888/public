@@ -3,6 +3,7 @@
             [crate.core :as c]
             [goog.dom :as gd]
             [goog.events :as ge]
+            [goog.net.XhrIo :as xhr]
             [goog.style :as gs]
             [goog.uri.utils :as uri]
             [resume.education :as ed]
@@ -15,22 +16,20 @@
   (:require-macros [resume.css :refer [style-sheet-str]]))
 
 (defn get-current-url []
+  ;;TODO: implement routing!
+  (xhr/send  (str (uri/getPath js/location.href) "out/resume.js")
+             #(js/console.log (-> % .-target .getResponseText)))
   (uri/parseQueryData (uri/getQueryData js/location.href)
-
                       ;;Statefully parse
-                      #(js/console.log (str %1 "-" %2))
-
-
-                      )
-  (js/console.dir js/location.href))
-
+                      #(js/console.log (str %1 "-" %2))))
 
 (defn set-style! []
   (aset js/document.head
         "innerHTML"
         (str "<style>"
              (style-sheet-str)
-             "</style>")))
+             "</style>"))
+  )
 
 (def css-link
   (c/html [:link {:rel "stylesheet"
@@ -49,31 +48,31 @@
   ;;For refreshing the page content without reloading
   (gd/removeChildren app-div)
   (set-style!)
-  (doseq [c [layout/layout
+  (.appendChild app-div
+                (-> [:div head
+                     email
 
-             head
-             email
+                     summary/text
 
-             summary/text
+                     skills/heading
+                     skills/listing
 
-             skills/heading
-             skills/listing
+                     ed/heading
+                     ed/listing
 
-             ed/heading
-             ed/listing
+                     talks/heading
+                     talks/listing
 
-             talks/heading
-             talks/listing
+                     work/heading
+                     work/listing
 
-             work/heading
-             work/listing
-
-             ;;Employment history + projects + awards
-             ;;Opensource work
-             ;;Picture
-             ;;Make the margin of li ul look nicer
-             ]]
-    (.appendChild app-div (c/html c)))
+                     ;;Employment history + projects + awards
+                     ;;Opensource work
+                     ;;Picture
+                     ;;Make the margin of li ul look nicer
+                     ]
+                    layout/layout
+                    c/html))
   (doseq [s [layout/decorate-menu-items
              skills/listen-toggle
              ed/listen-toggle
