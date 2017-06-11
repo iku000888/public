@@ -13,6 +13,10 @@
    [:.menu-item {:margin-left "1em"}]
    [:.menu-item.mouse-overed {:font-size "1.8em"
                               :cursor "pointer"}]
+   [:h3 {:cursor "pointer"}]
+   [:p {:width "75%"}]
    [:th {:border-bottom "solid"}]
    [:td {:border-bottom "dotted"}]
-   [:table {:border-spacing "1.5em"}]))
+   [:table {:border-spacing "1.5em"}]
+
+   [:li {:margin-top "1em"}]))

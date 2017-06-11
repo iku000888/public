@@ -7,6 +7,7 @@
             [goog.style :as gs]
             [goog.uri.utils :as uri]
             [resume.education :as ed]
+            [resume.resume :as resume]
             [resume.skills :as skills]
             [resume.summary :as summary]
             [resume.talks :as talks]
@@ -14,14 +15,6 @@
             [template.layout :as layout]
             [weasel.repl :as repl])
   (:require-macros [resume.css :refer [style-sheet-str]]))
-
-(defn get-current-url []
-  ;;TODO: implement routing!
-  (xhr/send  (str (uri/getPath js/location.href) "out/resume.js")
-             #(js/console.log (-> % .-target .getResponseText)))
-  (uri/parseQueryData (uri/getQueryData js/location.href)
-                      ;;Statefully parse
-                      #(js/console.log (str %1 "-" %2))))
 
 (defn set-style! []
   (aset js/document.head
@@ -37,49 +30,42 @@
 
 (def app-div (.getElementById js/document "app"))
 
-(def head [:h2 "Ikuru Leif Kanuma"])
-
-(def email [:div "kanumaiku@gmail.com"])
 
 ;;Initializing
 #_(.appendChild js/document.head css-link)
 #_(re-render)
-(defn re-render []
+(defn re-render [[content decorator]]
   ;;For refreshing the page content without reloading
   (gd/removeChildren app-div)
   (set-style!)
-  (.appendChild app-div
-                (-> [:div head
-                     email
+  (.appendChild app-div (-> content
+                            layout/layout
+                            c/html))
+  (when decorator
+    (decorator)))
 
-                     summary/text
+(defn parse-query-data []
+  ;;TODO: implement routing!
+  #_(xhr/send  (str (uri/getPath js/location.href) "out/resume.js")
+               #(js/console.log (-> % .-target .getResponseText)))
+  (let [query-map (atom {})]
+    (uri/parseQueryData (uri/getQueryData js/location.href)
+                        ;;Statefully parse
+                        (fn [k v] (swap! query-map #(assoc % (keyword k) v))))
+    @query-map))
 
-                     skills/heading
-                     skills/listing
+#_(re-render resume/content)
 
-                     ed/heading
-                     ed/listing
-
-                     talks/heading
-                     talks/listing
-
-                     work/heading
-                     work/listing
-
-                     ;;Employment history + projects + awards
-                     ;;Opensource work
-                     ;;Picture
-                     ;;Make the margin of li ul look nicer
-                     ]
-                    layout/layout
-                    c/html))
-  (doseq [s [layout/decorate-menu-items
-             skills/listen-toggle
-             ed/listen-toggle
-             talks/listen-toggle
-             work/listen-toggle]] (s)))
-
-(re-render)
+(if-let [show (:show (parse-query-data))]
+  (re-render (get {"resume" [resume/content
+                             #(doseq [s [layout/decorate-menu-items
+                                         resume/decorate-parts]] (s))]
+                   "writings" [[:span "fasdfajsd"]]
+                   "web-presence" [[:span "Under Construction"]]}
+                  show))
+  (re-render [resume/content
+              #(doseq [s [layout/decorate-menu-items
+                          resume/decorate-parts]] (s))]))
 
 (when-not (repl/alive?)
   (repl/connect "ws://localhost:9001"))
