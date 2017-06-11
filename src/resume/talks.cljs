@@ -17,12 +17,27 @@
                ;;TODO: Check exact dates
                ;;TODO: Link to the event page when poss.
                ;;BONUS: Make the table searchable/sortable for giggs
-               [:thead [:th "Talk Title(English)"] [:th "Event Name"] [:th "When"] [:th "Slides"]]
+               [:thead [:th "Talk Title(English)"] [:th "Event Name"] [:th "When"]]
 
-               [:tr [:td "Making Thumbnails"] [:td "Shibuya Java"] [:td "2017-01-29"]]
-               [:tr [:td "Webforms Made Easy"] [:td "Lisp Meetup"] [:td "2017-02-21"]]
-               [:tr [:td "Fighting Shift_JIS encoding"] [:td "Nishi Shinjuku Clojure"] [:td "2017-03-22"]]
-               [:tr [:td "Arachne Unweaved"] [:td "JJUG CCC Spring 2017"] [:td "2017-05-20"]]
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/arachne-unweaved-jp"}
+                          "Arachne Unweaved"]]
+                [:td "JJUG CCC Spring 2017"]
+                [:td "2017-05-20"]]
+
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/clojure-73130145"}
+                          "Fighting Shift_JIS encoding"]]
+                [:td "Nishi Shinjuku Clojure"]
+                [:td "2017-03-22"]]
+
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/web-forms-made-easy-with-formative"} "Webforms Made Easy"]]
+                [:td "Lisp Meetup"]
+                [:td "2017-02-21"]]
+
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/ss-71495253"}
+                          "Making Thumbnails"]]
+                [:td "Shibuya Java"]
+                [:td "2017-01-29"]]
+
                ]])
 
 (defn listen-toggle []
