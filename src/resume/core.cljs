@@ -4,14 +4,26 @@
             [goog.dom :as gd]
             [goog.events :as ge]
             [goog.style :as gs]
+            [goog.uri.utils :as uri]
             [resume.education :as ed]
             [resume.skills :as skills]
             [resume.summary :as summary]
             [resume.talks :as talks]
             [resume.work :as work]
-            [weasel.repl :as repl]
-            [template.layout :as layout])
+            [template.layout :as layout]
+            [weasel.repl :as repl])
   (:require-macros [resume.css :refer [style-sheet-str]]))
+
+(defn get-current-url []
+  (uri/parseQueryData (uri/getQueryData js/location.href)
+
+                      ;;Statefully parse
+                      #(js/console.log (str %1 "-" %2))
+
+
+                      )
+  (js/console.dir js/location.href))
+
 
 (defn set-style! []
   (aset js/document.head
