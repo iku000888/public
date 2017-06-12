@@ -4,7 +4,8 @@
             [goog.uri.utils :as uri]
             [resume.resume :as resume]
             [template.layout :as layout]
-            [weasel.repl :as repl])
+            [weasel.repl :as repl]
+            [web-presence.presence :as presence])
   (:require-macros [resume.css :refer [style-sheet-str]]))
 
 (defn set-style! []
@@ -50,7 +51,7 @@
                                          resume/decorate-parts]] (s))]
                    "writings" [[:span "fasdfajsd"]
                                layout/decorate-menu-items]
-                   "web-presence" [[:span "Under Construction"]
+                   "web-presence" [presence/content
                                    layout/decorate-menu-items]}
                   show))
   (re-render [resume/content
