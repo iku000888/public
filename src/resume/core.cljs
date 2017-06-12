@@ -19,10 +19,9 @@
 (defn set-style! []
   (aset js/document.head
         "innerHTML"
-        (str "<style>"
-             (style-sheet-str)
-             "</style>"))
-  )
+        (str
+         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+         "<style>" (style-sheet-str) "</style>")))
 
 (def css-link
   (c/html [:link {:rel "stylesheet"
