@@ -4,6 +4,4 @@
 
 (def text
   [:div
-   [:h2 "Summary:"]
-   [:p (p I am an engineer with a strong passion for
-          Clojure/ClojureScript looking for my next new challenge)]])
+   [:p (p I am a Software Engineer with a strong passion for Clojure/ClojureScript)]])

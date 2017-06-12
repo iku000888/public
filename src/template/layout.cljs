@@ -1,19 +1,23 @@
 (ns template.layout
-  (:require [goog.events :as ge]
+  (:require [goog.dom.classlist :as gc]
+            [goog.events :as ge]
             [goog.events.EventType :as et]
-            [goog.dom.classlist :as gc]))
+            [goog.uri.utils :as uri]))
 
 (defn layout [content]
+  (js/console.log "fooo!!!!")
   [:div
    [:div {:id "menu-div"
           :class "menu"}
     [:span.logo (str '(-> Ikuru learn forget))]
 
-    [:span.menu-item "About"]
-    [:span.menu-item "Writings"]
-    [:span.menu-item "Other Web Presence"]]
-   content
-   ])
+    [:span.menu-item
+     [:a {:href (str (uri/getPath js/location.href) "?show=resume")} "About"]]
+    [:span.menu-item
+     [:a {:href (str (uri/getPath js/location.href) "?show=writings")} "Writings"]]
+    [:span.menu-item
+     [:a {:href (str (uri/getPath js/location.href) "?show=web-presence")} "Other Web Presence"]]]
+   content])
 
 (defn decorate-menu-items []
   (doseq [el (array-seq (.getElementsByClassName js/document "menu-item"))]

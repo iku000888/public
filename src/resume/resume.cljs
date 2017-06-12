@@ -16,9 +16,6 @@
 
        summary/text
 
-       skills/heading
-       skills/listing
-
        ed/heading
        ed/listing
 
@@ -27,6 +24,9 @@
 
        work/heading
        work/listing
+
+       skills/heading
+       skills/listing
 
        ;;Employment history + projects + awards
        ;;Opensource work

@@ -1,17 +1,8 @@
 (ns resume.core
-  (:require [clojure.string :as str]
-            [crate.core :as c]
+  (:require [crate.core :as c]
             [goog.dom :as gd]
-            [goog.events :as ge]
-            [goog.net.XhrIo :as xhr]
-            [goog.style :as gs]
             [goog.uri.utils :as uri]
-            [resume.education :as ed]
             [resume.resume :as resume]
-            [resume.skills :as skills]
-            [resume.summary :as summary]
-            [resume.talks :as talks]
-            [resume.work :as work]
             [template.layout :as layout]
             [weasel.repl :as repl])
   (:require-macros [resume.css :refer [style-sheet-str]]))
@@ -31,8 +22,6 @@
 
 
 ;;Initializing
-#_(.appendChild js/document.head css-link)
-#_(re-render)
 (defn re-render [[content decorator]]
   ;;For refreshing the page content without reloading
   (gd/removeChildren app-div)
@@ -59,8 +48,10 @@
   (re-render (get {"resume" [resume/content
                              #(doseq [s [layout/decorate-menu-items
                                          resume/decorate-parts]] (s))]
-                   "writings" [[:span "fasdfajsd"]]
-                   "web-presence" [[:span "Under Construction"]]}
+                   "writings" [[:span "fasdfajsd"]
+                               layout/decorate-menu-items]
+                   "web-presence" [[:span "Under Construction"]
+                                   layout/decorate-menu-items]}
                   show))
   (re-render [resume/content
               #(doseq [s [layout/decorate-menu-items
