@@ -14,11 +14,13 @@
    [:.logo {:font-family "monospace"
             :font-size "2.5em"
             :display "inline"}]
+   [:.menu-item {:margin-left "1em"}]
    (at-media {:max-width "750px"}
              [:.logo {:font-family "monospace"
                       :font-size "1.5em"
-                      :display "block"}])
-   [:.menu-item {:margin-left "1em"}]
+                      :display "block"}]
+             [:.menu-item {:display "block"
+                           :margin-top ".5em"}])
    [:.menu-item.mouse-overed {:font-size "1.8em"
                               :cursor "pointer"}]
    [:h3 {:cursor "pointer"}]
