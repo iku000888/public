@@ -2,6 +2,7 @@
   (:require [crate.core :as c]
             [goog.dom :as gd]
             [goog.uri.utils :as uri]
+            [projects.listing :as proj]
             [resume.resume :as resume]
             [template.layout :as layout]
             [weasel.repl :as repl]
@@ -51,6 +52,7 @@
                                          resume/decorate-parts]] (s))]
                    "writings" [[:span "fasdfajsd"]
                                layout/decorate-menu-items]
+                   "projects" [proj/projects]
                    "web-presence" [presence/content
                                    layout/decorate-menu-items]}
                   show))
