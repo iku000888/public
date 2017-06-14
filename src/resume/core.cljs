@@ -2,6 +2,7 @@
   (:require [crate.core :as c]
             [goog.dom :as gd]
             [goog.uri.utils :as uri]
+            [posts.toc :as posts]
             [projects.listing :as proj]
             [resume.resume :as resume]
             [template.layout :as layout]
@@ -50,8 +51,9 @@
   (re-render (get {"resume" [resume/content
                              #(doseq [s [layout/decorate-menu-items
                                          resume/decorate-parts]] (s))]
-                   "writings" [[:span "fasdfajsd"]
-                               layout/decorate-menu-items]
+                   "writings" [posts/toc
+                               #(do (layout/decorate-menu-items)
+                                    (posts/decorate-toc))]
                    "projects" [proj/projects]
                    "web-presence" [presence/content
                                    layout/decorate-menu-items]}
