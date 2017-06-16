@@ -54,7 +54,8 @@
                    "writings" [posts/toc
                                #(do (layout/decorate-menu-items)
                                     (posts/decorate-toc))]
-                   "projects" [proj/projects]
+                   "projects" [proj/projects
+                               layout/decorate-menu-items]
                    "web-presence" [presence/content
                                    layout/decorate-menu-items]}
                   show))
