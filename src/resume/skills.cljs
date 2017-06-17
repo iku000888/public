@@ -5,24 +5,24 @@
             [goog.style :as gs]
             [resume.toggle-expand :as toggle])
   (:require-macros [resume.macros :refer [p]]))
-(def agagaga "popopo")
+
 (def heading [:h3 {:id "skill-h"} "- Skills"])
 (def listing [:ul {:id "skill-l"}
               [:li "Clojure/ClojureScript"
-               [:p (p I am absolutely in love with Clojure/ClojureScript to the extent that I feel no
-                      need to look into any other programming language.)
+               #_[:p (p I am absolutely in love with Clojure/ClojureScript to the extent that I feel no
+                        need to look into any other programming language.)
 
-                ;;TODO: move this to project section
-                #_(p Built a web service with a team of 3 during May 2016 - May "2017."
-                     This was my first fulltime Clojure project and it is gaining customers "rapidly."
-                     The story made it onto the Official Clojure Website)]]
+                  ;;TODO: move this to project section
+                  #_(p Built a web service with a team of 3 during May 2016 - May "2017."
+                       This was my first fulltime Clojure project and it is gaining customers "rapidly."
+                       The story made it onto the Official Clojure Website)]]
 
               [:li "Web Development"]
               [:li "Automated Browser Testing (Selenium/Web Driver)"]
 
               [:li "Emacs"
-               [:p (p Writing Clojure with Emacs+paredit+cider+cljr-refactor
-                      is pure joy. It is just way too fun to move the "()'s" around)]]
+               #_[:p (p Writing Clojure with Emacs+paredit+cider+cljr-refactor
+                        is pure joy. It is just way too fun to move the "()'s" around)]]
 
 
               [:li "Bilingual (English/Japanese)"

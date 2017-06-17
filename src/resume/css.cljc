@@ -53,11 +53,24 @@
               {:display "block"}])
 
    ;;TODO:responsive
-   [:div.proj-content
+   [:.proj-content
     {:border ["groove"]
+     ;;:width "40%"
+     ;;:display ["inline"]
+     ;;:position "relative"
      :border-radius "1em"
      :padding-bottom "1em"
      :padding-right "1em"
      :padding-left "1em"
      :margin-bottom "1em"}]
+
+   (at-media {:max-width "750px"}
+             [:.proj-content
+              {:border ["groove"]
+                                        ;:width "100%"
+               :border-radius "1em"
+               :padding-bottom "0"
+               :padding-right "0"
+               :padding-left "0"
+               :margin-bottom "1em"}])
    [:li {:margin-top "1em"}]))

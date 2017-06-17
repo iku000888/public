@@ -14,9 +14,9 @@
     [:span.menu-item
      [:a {:href (str (uri/getPath js/location.href) "?show=resume")} "About"]]
     [:span.menu-item
-     [:a {:href (str (uri/getPath js/location.href) "?show=writings")} "Writings"]]
-    [:span.menu-item
      [:a {:href (str (uri/getPath js/location.href) "?show=projects")} "Projects"]]
+    [:span.menu-item
+     [:a {:href (str (uri/getPath js/location.href) "?show=writings")} "Writings"]]
     [:span.menu-item
      [:a {:href (str (uri/getPath js/location.href) "?show=web-presence")} "Other Web Presence"]]]
    content])

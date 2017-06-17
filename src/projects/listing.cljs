@@ -29,10 +29,10 @@
 
 (def formative
   [:div.proj-content
-   [:h3 "Formative"]
+   [:h3 "Formative(Maintenance)"]
    [:code.boxed
     (str {:since "January 2017"})]
-   [:p (p This library was used extensively in a project at "work")]])
+   [:p (p This library was used extensively in "Anpi2," but was not maintained since "2014." I asked the original author for commit rights to do main )]])
 
 (def dental-robotics
   [:div.proj-content
@@ -43,7 +43,7 @@
      :to "June 2014"
      :skills #{"MATLAB" "Robotic Arm"}})
    [:p (p This was the research topic throughout my undergraduate career.
-          The onjective is to simulate the laminate porcelain preparation with a robotic arm.
+          The objective is to simulate the laminate porcelain preparation with a robotic arm.
           I was responsible for most of the implementation.
           Collaborated with actual dentists for result evaluation.)]])
 
@@ -60,7 +60,7 @@
 (def projects
   [:div
 
-   [:h2 "My Projects and/or projects that I have participated"]
+   [:h2 "My Projects and/or projects that I have participated in"]
 
    pc-auto-save
    anpi2

@@ -7,18 +7,21 @@
 (def listing [:div {:id "talks"}
 
               ;;TODO: Make this wrap
-              [:p "I enjoy giving talks about Clojure/ClojureScript"
-               #_(p In "2017," I started giving talks at meetups/conferences
-                    because I wanted to step up my game as a software engineer.
-                    "(i.e. I want more people to know me and vice versa"
-                    I find giving talks is a great way to re-inforce my understanding of a topic
-                    and plan on giving as many talks as possible) ]
+              #_[:p "I enjoy giving talks about Clojure/ClojureScript"
+                 #_(p In "2017," I started giving talks at meetups/conferences
+                      because I wanted to step up my game as a software engineer.
+                      "(i.e. I want more people to know me and vice versa"
+                      I find giving talks is a great way to re-inforce my understanding of a topic
+                      and plan on giving as many talks as possible) ]
               [:table
                ;;TODO: Make the table bordered
                ;;TODO: Check exact dates
                ;;TODO: Link to the event page when poss.
                ;;BONUS: Make the table searchable/sortable for giggs
-               [:thead [:th "Talk Title(English)"] [:th "Event Name"] [:th "When"]]
+               [:thead
+                [:th "Talk Title"]
+                [:th "Event Name"]
+                [:th "Date"]]
 
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/arachne-unweaved-jp"}
                           "Arachne Unweaved"]]
