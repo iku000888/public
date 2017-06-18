@@ -75,6 +75,7 @@
                  (gs/setElementShown el false)
                  (clear-content-div)
                  (aset js/location "hash" ""))))
-  (when-let [post-name (seq (ru/get-hash-value))]
-    (fetch-and-show-post
-     (str "posts/" post-name))))
+  (let [post-name (ru/get-hash-value)]
+    (when (seq post-name)
+      (fetch-and-show-post
+       (str "posts/" post-name)))))

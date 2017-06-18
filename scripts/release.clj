@@ -4,8 +4,8 @@
 
 (let [start (System/nanoTime)]
   (b/build "src"
-    {:output-to "release/resume.js"
-     :output-dir "release"
-     :optimizations :advanced
-     :verbose true})
+           {:main 'resume.core
+            :output-to "out/resume.js"
+            :optimizations :advanced
+            :verbose true})
   (println "... done. Elapsed" (/ (- (System/nanoTime) start) 1e9) "seconds"))
