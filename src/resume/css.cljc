@@ -32,6 +32,8 @@
    [:table {:border-spacing "1.5em"}]
    [:code.boxed
     {:border-bottom "solid"
+     :display "inline-block"
+     :width "auto"
      :border-top "solid"
      :background-color "#EEEEEE"
      :border-left "solid"
@@ -55,22 +57,30 @@
    ;;TODO:responsive
    [:.proj-content
     {:border ["groove"]
-     ;;:width "40%"
-     ;;:display ["inline"]
-     ;;:position "relative"
+                                        ;:width "100%"
      :border-radius "1em"
-     :padding-bottom "1em"
-     :padding-right "1em"
-     :padding-left "1em"
+     :padding-bottom "0"
+     :padding-right "0"
+     :padding-left "0"
      :margin-bottom "1em"}]
 
-   (at-media {:max-width "750px"}
+
+   (at-media {:min-width "751px"}
              [:.proj-content
               {:border ["groove"]
-                                        ;:width "100%"
+               :width "60%"
+               ;;:position "relative"
                :border-radius "1em"
-               :padding-bottom "0"
-               :padding-right "0"
-               :padding-left "0"
+               :padding-bottom "1em"
+               :padding-right "1em"
+               :padding-left "1em"
                :margin-bottom "1em"}])
-   [:li {:margin-top "1em"}]))
+   [:li {:margin-top "1em"}]
+
+   [:.indent-3em {:margin-left "3em"}]
+
+   [:p.blog-post {:line-height "150%"
+                  :margin-left "2em"}]
+   (at-media {:min-width "751px"}
+             [:p.blog-post {:width "50em"}])
+   ))

@@ -23,23 +23,33 @@
                 [:th "Event Name"]
                 [:th "Date"]]
 
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/clojure-web-dev-history"}
+                          "Clojure Web Dev History"]]
+                [:td [:a {:href "https://shibuya-java.connpass.com/event/57368/"}
+                      "Shibuya Java #19"]]
+                [:td "2017-06-17"]]
+
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/arachne-unweaved-jp"}
                           "Arachne Unweaved"]]
-                [:td "JJUG CCC Spring 2017"]
+                [:td [:a {:href "http://www.java-users.jp/ccc2017spring/"}
+                      "JJUG CCC Spring 2017"]]
                 [:td "2017-05-20"]]
 
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/clojure-73130145"}
                           "Fighting Shift_JIS encoding"]]
-                [:td "Nishi Shinjuku Clojure"]
+                [:td [:a {:href "https://nishi-shinju-clojure.connpass.com/event/52434/"}
+                      "Nishi Shinjuku Clojure #1"]]
                 [:td "2017-03-22"]]
 
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/web-forms-made-easy-with-formative"} "Webforms Made Easy"]]
-                [:td "Lisp Meetup"]
+                [:td [:a {:href "https://lisp.connpass.com/event/50148/"}
+                      "Lisp Meetup #49"]]
                 [:td "2017-02-21"]]
 
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/ss-71495253"}
                           "Making Thumbnails"]]
-                [:td "Shibuya Java"]
+                [:td [:a {:href "https://shibuya-java.connpass.com/event/47453/"}
+                      "Shibuya Java #18"]]
                 [:td "2017-01-29"]]
 
                ]])

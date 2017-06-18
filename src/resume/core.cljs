@@ -5,6 +5,7 @@
             [posts.toc :as posts]
             [projects.listing :as proj]
             [resume.resume :as resume]
+            [resume.utils :as ru]
             [template.layout :as layout]
             [weasel.repl :as repl]
             [web-presence.presence :as presence])
@@ -35,33 +36,22 @@
   (when decorator
     (decorator)))
 
-(defn parse-query-data []
-  ;;TODO: implement routing!
-  #_(xhr/send  (str (uri/getPath js/location.href) "out/resume.js")
-               #(js/console.log (-> % .-target .getResponseText)))
-  (let [query-map (atom {})]
-    (uri/parseQueryData (uri/getQueryData js/location.href)
-                        ;;Statefully parse
-                        (fn [k v] (swap! query-map #(assoc % (keyword k) v))))
-    @query-map))
-
-#_(re-render resume/content)
-
-(if-let [show (:show (parse-query-data))]
-  (re-render (get {"resume" [resume/content
-                             #(doseq [s [layout/decorate-menu-items
-                                         resume/decorate-parts]] (s))]
-                   "writings" [posts/toc
-                               #(do (layout/decorate-menu-items)
-                                    (posts/decorate-toc))]
-                   "projects" [proj/projects
-                               layout/decorate-menu-items]
-                   "web-presence" [presence/content
-                                   layout/decorate-menu-items]}
-                  show))
-  (re-render [resume/content
-              #(doseq [s [layout/decorate-menu-items
-                          resume/decorate-parts]] (s))]))
+(let [q (ru/parse-query-data)]
+  (if-let [show (:show q)]
+    (re-render (get {"resume" [resume/content
+                               #(doseq [s [layout/decorate-menu-items
+                                           resume/decorate-parts]] (s))]
+                     "writings" [posts/toc
+                                 #(do (layout/decorate-menu-items)
+                                      (posts/decorate-toc q))]
+                     "projects" [proj/projects
+                                 layout/decorate-menu-items]
+                     "web-presence" [presence/content
+                                     layout/decorate-menu-items]}
+                    show))
+    (re-render [resume/content
+                #(doseq [s [layout/decorate-menu-items
+                            resume/decorate-parts]] (s))])))
 
 (when-not (repl/alive?)
   (repl/connect "ws://localhost:9001"))

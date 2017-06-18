@@ -9,12 +9,12 @@
       h/html
       str))
 
-(defmacro defpost [post-name ts content]
+(defmacro defpost [var-name disp-title ts content]
   (when-not (.exists (io/file "posts"))
     (.mkdir (File. "posts")))
-  (spit (io/file "posts" (str post-name))
+  (spit (io/file "posts" (str var-name))
         (pre-render-hiccup (eval content)))
-  `(def ~(symbol (str post-name))
-     {:title ~(str post-name)
+  `(def ~(symbol (str var-name))
+     {:title ~(str disp-title)
       :created-at ~ts
-      :url  ~(str "posts/" post-name)}))
+      :url  ~(str "posts/" var-name)}))

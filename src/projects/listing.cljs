@@ -17,15 +17,22 @@
     (p " " product that enables PDF creations from) [:a {:href "https://kintone.cybozu.com"}
                                                      " Kintone "] "records."]
    [:p (p I created an extention js (implemented in ClojureScript) that would allow the user to save the output PDF into an attachment file field in a Kintone record.)]
-   [:a {:href "https://kintoneapp.com/blog/printcreator_autosave/"}
-    "Relavant Blog Post"]])
+   [:div
+    [:a {:href "https://kintoneapp.com/blog/printcreator_autosave/"}
+     "Relavant Blog Post"]]])
 
 (def anpi2
   [:div.proj-content
    [:h3 "Anpi2"]
-   [:p (p This was the first project in my professional Clojure career. The details of the project made it onto the )
+   [:p (p Details of the project made it onto the " ")
     [:a {:href "https://clojure.org/stories/cstap"}
-     " official Clojure site!"]]])
+     "official Clojure site!"]]
+   [:p
+    [:a {:href "https://anpi.cstap.com/anpi2.html"}
+     "product site"]]
+   [:code.boxed
+    (str {:from "May 2016" :to "May 2017"})]
+   ])
 
 (def formative
   [:div.proj-content
