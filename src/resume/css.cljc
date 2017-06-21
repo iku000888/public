@@ -79,7 +79,12 @@
 
    [:.indent-3em {:margin-left "3em"}]
 
+   [:div.blog-listing {:margin-top ".4em"}]
+   [:span.blog-listing {:font-size "1.35em"}]
+   [:a.blog-listing {:margin-right ".3em"}]
+
    [:p.blog-post {:line-height "150%"
+                  :font-size "1.25em"
                   :margin-left "2em"}]
    (at-media {:min-width "751px"}
              [:p.blog-post {:width "50em"}])

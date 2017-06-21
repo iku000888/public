@@ -12,10 +12,10 @@
   [:div
    [:div {:id "posts-toc-container"}
     [:h2 "Thoughts on code, life, etc"]
-    (map #(vector :div {:class "link-to-post"}
-                  [:span
-                   [:a {:href "foobar"
-                        :id (:url %)} (:title %)]
+    (map #(vector :div {:class "link-to-post blog-listing"}
+                  [:span.blog-listing
+                   [:a.blog-listing {:href "foobar"
+                                     :id (:url %)} (:title %)]
                    " " (:created-at %)])
          [shja/shibuya-java-19
           cljs-website/made-cljs-website])]
