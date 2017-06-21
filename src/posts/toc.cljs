@@ -5,6 +5,7 @@
             [goog.string :as gstr]
             [goog.style :as gs]
             [posts.made-cljs-website :as cljs-website]
+            [posts.shibuya-java-19 :as shja]
             [resume.utils :as ru]))
 
 (def toc
@@ -16,7 +17,8 @@
                    [:a {:href "foobar"
                         :id (:url %)} (:title %)]
                    " " (:created-at %)])
-         [cljs-website/made-cljs-website])]
+         [shja/shibuya-java-19
+          cljs-website/made-cljs-website])]
    [:div {:id "post-content-div-container"}
     [:div {:id "post-content-div"}]
     [:a {:href "foobar"
@@ -43,16 +45,19 @@
       (gs/setElementShown false)))
 
 (defn clear-content-div []
-  (aset (.getElementById js/document "post-content-div")
-        "innerHTML" ""))
+  (let [el (.getElementById js/document "post-content-div")]
+    (gs/setElementShown el false)))
 
 (defn set-content-div [content]
-  (aset (.getElementById js/document "post-content-div")
-        "innerHTML" content))
+  (let [el (.getElementById js/document "post-content-div")]
+    (gs/setElementShown el true)
+    (aset el "innerHTML" content)))
 
 (defn fetch-and-show-post [url]
   (xhrio/send url
               (fn [e]
+                (js/console.dir e)
+                (js/console.log (-> e .-target .getResponseText))
                 (set-content-div (-> e .-target .getResponseText))
                 (hide-toc-container)
                 (show-back-link)
@@ -65,13 +70,13 @@
     (ge/listen el et/CLICK
                (fn [e]
                  (.preventDefault e)
-                 (js/console.log (-> e .-target (aget "id")))
                  (fetch-and-show-post (-> e .-target (aget "id"))))))
   (let [el (.getElementById js/document "posts-back-to-content-link")]
     (ge/listen el et/CLICK
                (fn [e]
                  (.preventDefault e)
                  (show-toc-container)
+                 (hide-back-link)
                  (gs/setElementShown el false)
                  (clear-content-div)
                  (aset js/location "hash" ""))))
