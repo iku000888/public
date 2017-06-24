@@ -2,7 +2,6 @@ pom.xml
 *jar
 /lib/
 /classes/
-/out/
 /release/
 /target/
 .lein-deps-sum
@@ -10,3 +9,7 @@ pom.xml
 .lein-plugins/
 .repl*
 posts/*
+
+/out/*
+
+!/out/resume.js
