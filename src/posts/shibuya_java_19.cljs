@@ -65,39 +65,46 @@
       supported by a small group of passionate developers. Apparantly it has first class
       Eclipse support etc and some other nice features to cope with the verbosity of Java.
       There were some giggle worthy remarks such as)]
-    [:q
+    [:q.blog-post
      (resume.macros/p
       Project tag line is "'Java 10 today'" while Java 9 release is getting delayed)]
-    [:q
+    [:q.blog-post
      (resume.macros/p
       It compiles into readable Java "code," so it can be used
       in situations where you do not want to write "Java," but the
-      deliverable is Java source code.)]]
+      deliverable is Java source code)]]
 
    [:div [:h3 "Graal VM - by " [:a {:href "https://twitter.com/takezoen"}
                                 "vertical_blank"]]
     [:p.blog-post
-     [:a {:href "https://www.eclipse.org/xtend/"} "Xtend"]
      (resume.macros/p
-      " " is a "'dialect of Java'" that compiles into Java source "code,"
-      supported by a small group of passionate developers. Apparantly it has first class
-      Eclipse support etc and some other nice features to cope with the verbosity of Java.
-      There were some giggle worthy remarks such as)]
-    [:q
+      Graal is a JIT compiler written in Java that bundles together)
+     [:ul
+      [:li "truffle"]
+      [:li "JavaScript(+node js)"]
+      [:li "Ruby"]
+      [:li "R"]]
+     ]
+    [:p.blog-post
      (resume.macros/p
-      Project tag line is "'Java 10 today'" while Java 9 release is getting delayed)]
-    [:q
-     (resume.macros/p
-      It compiles into readable Java "code," so it can be used
-      in situations where you do not want to write "Java," but the
-      deliverable is Java source code.)]]
+      More specifically that means there is a runtime that provides an interpreter for all of the
+      above. Apparantly it is possible to invoke all sorts of Java constructs from
+      "JavaScript/Ruby etc," which is pretty impressive. I imagine a lot of effort is being
+      pourd into this product to support these different "interpreters," but it definitely has its
+      apeal to polyglot minded environments.)]]
 
-   [:p
-    "Takezoe san's blog contains"
+   [:div [:h3 "Clojure Web Dev History - by Me"]
+    [:p.blog-post
+     (resume.macros/p
+      I prepared a talk from the slides that were eliminated from the " ")
+     [:a {:href "https://www.slideshare.net/IkuruKanuma/arachne-unweaved-jp"}
+      "talk I gave at JJUG CCC."]
+     (resume.macros/p
+      " " They were eliminated mainly because they were not directly related to the topic
+      and time was limited. I think the audiences enjoyed the "talk," and it made me really
+      happy to see my research effort not go to waste.)]]
+
+   [:p.blog-post
+    "Takezoe san's blog contains "
     [:a {:href "http://takezoe.hatenablog.com/entry/2017/06/20/082020"}
-     "links to the slides"]]
-
-
-
-
-   ])
+     " links to the slides"]]])

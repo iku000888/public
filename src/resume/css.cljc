@@ -83,6 +83,14 @@
    [:span.blog-listing {:font-size "1.35em"}]
    [:a.blog-listing {:margin-right ".3em"}]
 
+   [:q.blog-post {:display "block"
+                  :line-height "120%"
+                  :width "40em"
+                  :font-style "italic"
+                  :margin-left "2.3em"}]
+   [:q.blog-post:before {:content "'- '"}]
+   [:q.blog-post:after {:content "' -'"}]
+
    [:p.blog-post {:line-height "150%"
                   :font-size "1.25em"
                   :margin-left "2em"}]
