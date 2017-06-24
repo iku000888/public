@@ -8,8 +8,6 @@ pom.xml
 .lein-repl-history
 .lein-plugins/
 .repl*
-posts/*
-
 /out/*
 
 !/out/resume.js
