@@ -23,6 +23,12 @@
                 [:th "Event Name"]
                 [:th "Date"]]
 
+               [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/welcome-to-clojurescript"}
+                          "Welcome to ClojureScript"]]
+                [:td [:a {:href "https://it-ghost.connpass.com/event/59062/"}
+                      "Saturday Night js"]]
+                [:td "2017-06-24"]]
+
                [:tr [:td [:a {:href "https://www.slideshare.net/IkuruKanuma/clojure-web-dev-history"}
                           "Clojure Web Dev History"]]
                 [:td [:a {:href "https://shibuya-java.connpass.com/event/57368/"}

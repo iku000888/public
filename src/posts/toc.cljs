@@ -4,6 +4,7 @@
             [goog.net.XhrIo :as xhrio]
             [goog.string :as gstr]
             [goog.style :as gs]
+            [posts.gave-cljs-talk :as cljs-talk]
             [posts.made-cljs-website :as cljs-website]
             [posts.shibuya-java-19 :as shja]
             [resume.utils :as ru]))
@@ -17,7 +18,8 @@
                    [:a.blog-listing {:href "foobar"
                                      :id (:url %)} (:title %)]
                    " " (:created-at %)])
-         [shja/shibuya-java-19
+         [cljs-talk/gave-cljs-talk
+          shja/shibuya-java-19
           cljs-website/made-cljs-website])]
    [:div {:id "post-content-div-container"}
     [:div {:id "post-content-div"}]
