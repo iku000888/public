@@ -4,7 +4,7 @@
   (b/watch "src"
            {:main 'resume.core
             :output-to "out/resume.js"
-            :optimizations :advanced
+            :optimizations :simple
             :output-dir "out"}))
 
 (do (require 'weasel.repl.websocket)

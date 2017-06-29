@@ -13,7 +13,7 @@
     " " [:a {:href "https://shibuya-java.connpass.com/event/57368/"}
          "Shibuya Java #19"]
     " hosted by "
-    [:a {:href "http://www.bizreach.co.jp"} "Bizreach"]
+    [:a {:href "http://www.bizreach.co.jp"} "Bizreach "]
 
 
     (resume.macros/p
@@ -79,7 +79,7 @@
     [:p.blog-post
      (resume.macros/p
       Graal is a JIT compiler written in Java that bundles together)
-     [:ul
+     [:ul.blog-post
       [:li "truffle"]
       [:li "JavaScript(+node js)"]
       [:li "Ruby"]

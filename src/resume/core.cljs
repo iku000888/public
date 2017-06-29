@@ -7,7 +7,7 @@
             [resume.resume :as resume]
             [resume.utils :as ru]
             [template.layout :as layout]
-            #_[weasel.repl :as repl]
+            [weasel.repl :as repl]
             [web-presence.presence :as presence])
   (:require-macros [resume.css :refer [style-sheet-str]]))
 
@@ -53,5 +53,5 @@
                 #(doseq [s [layout/decorate-menu-items
                             resume/decorate-parts]] (s))])))
 
-#_(when-not (repl/alive?)
-    (repl/connect "ws://localhost:9001"))
+(when-not (repl/alive?)
+  (repl/connect "ws://localhost:9001"))
