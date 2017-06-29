@@ -58,8 +58,6 @@
 (defn fetch-and-show-post [url]
   (xhrio/send url
               (fn [e]
-                (js/console.dir e)
-                (js/console.log (-> e .-target .getResponseText))
                 (set-content-div (-> e .-target .getResponseText))
                 (hide-toc-container)
                 (show-back-link)

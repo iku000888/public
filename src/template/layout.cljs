@@ -5,7 +5,6 @@
             [goog.uri.utils :as uri]))
 
 (defn layout [content]
-  (js/console.log "fooo!!!!")
   [:div
    [:div {:id "menu-div"
           :class "menu"}
