@@ -20,9 +20,7 @@
      I started the project with the)
     " " [:a {:href "https://github.com/swannodette/mies"} "mies template"] " "
     "and used " [:a {:href "https://github.com/tomjakubowski/weasel"} "weasel"] " "
-    (resume.macros/p for REPL needs.)
-
-    ]
+    (resume.macros/p for REPL needs.)]
 
    [:h3 "No React"]
    [:p.blog-post

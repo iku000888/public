@@ -10,8 +10,8 @@
    [:p.blog-post
     (resume.macros/p
      I attended a small Javascript study group (I think there were 6 or 7 people)
-     The first half of the session was dedicated to indviidual focus "time,"
-     which I spent it on putting this site on github.io. An bour and a half into the studytime
+     The first half of the session was dedicated to individual focus "time,"
+     which I spent on putting this site on github.io. An bour and a half into the studytime
      came the time for the talks. Before my talk)
 
 

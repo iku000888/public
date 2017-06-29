@@ -94,6 +94,12 @@
    [:p.blog-post {:line-height "150%"
                   :font-size "1.20em"
                   :margin-left "2em"
-                  :max-width "95%"
+                  :max-width "100%"
                   }]
-   [:ul.blog-post {:margin-left "2em"}]))
+   [:ul.blog-post {:margin-left "2em"}]
+   (at-media {:min-width "751px"}
+             [:p.blog-post {:max-width "70%"
+                            :margin-right "auto"
+                            }])
+
+   ))
