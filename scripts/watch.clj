@@ -5,6 +5,7 @@
            {:main 'resume.core
             :output-to "out/resume.js"
             :optimizations :simple
+            :verbose true
             :output-dir "out"}))
 
 (do (require 'weasel.repl.websocket)

@@ -1,5 +1,5 @@
 (ns posts.made-cljs-website
-  (:require-macros [posts.macros :refer [defpost]]
+  (:require-macros [posts.macros :refer [defpost code->hiccup]]
                    [resume.macros :refer [p]]))
 (defpost made-cljs-website
   "Making this website"
@@ -63,6 +63,30 @@
     "I used " [:a {:href "https://github.com/noprompt/garden"} "garden"] " "
     (resume.macros/p
      to style this site. It was my first time using "this," and I found it amazing.
-     I was able to quickly iterate with the design of this site.)]]
+     I was able to quickly iterate with the design of this site.)]
+
+   [:h3 "The " [:code "code->hiccup"] " macro"]
+   [:p.blog-post
+    (resume.macros/p
+     I am definitely going to write code related stuff in this "site," and I wanted to
+     write them as inline clojure forms embedded within the source code of this site.
+     Usage would be something like "this:")]
+
+   [:code.boxed.indent-3em
+    [:pre.no-margin "(posts.macros/code->hiccup"]
+    [:pre.no-margin "  (let [x 4] :p.m/nl"]
+    [:pre.no-margin "     (* x x))"]
+    [:pre.no-margin "=> [:code.boxed.indent-3em"]
+    [:pre.no-margin "    [:pre.no-margin \"(let [x 4]\"]"]
+    [:pre.no-margin "    [:pre.no-margin \"  (* x x))\"]]"]]
+
+   [:p.blog-post
+    (resume.macros/p
+     The :p.m/nl is a weird signal I invented to mean "'break the line here'."
+     )]
+
+
+   ]
+
   ;;content-h
   )

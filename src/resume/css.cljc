@@ -41,6 +41,8 @@
      :border-radius ".3em"
      :padding ".5em .5em .5em .5em"}]
 
+   [:pre.no-margin {:margin "0"}]
+
    [:code.fragment
     {:border-bottom "solid"
      :border-top "solid"
