@@ -14,8 +14,9 @@
        (str/join " "))  )
 
 (defmacro p2
-  "Same intention as the original 'p', but allows hiccup vectors to be 'escaped' as is.
-   (that is, no string conversion.)"
+  "Same intention as the original 'p', but allows hiccup vectors to be 'escaped' as is
+   (that is, no string conversion). Created because if I wanted to make a hyperlink within
+   a paragraph I had to do something like (p blah blah) [:a {\"herf\" \"foo\"}] (p blah blah). "
   [& body]
   `(list
     ~@(->> body
