@@ -11,3 +11,5 @@ pom.xml
 /out/*
 
 !/out/resume.js
+/fiddles/figwheel_server.log
+/fiddles/figwheel.edn

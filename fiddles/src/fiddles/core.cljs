@@ -79,9 +79,13 @@
 
 (rf/reg-event-db
  ::update
+ ;;[rf/debug] optional interceptors
  (fn [db [_ new-val]]
    (assoc db :message new-val)))
 
 (rf/dispatch [::init])
 (r/render [re-frame-main]
           (.getElementById js/document "app"))
+
+(comment
+  (rf/dispatch [::update "afsdfa"]))
