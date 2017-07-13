@@ -9,6 +9,7 @@
             [posts.peek-pop :as pp]
             [posts.clojure-dot-tokyo4 :as cljtkyo4]
             [posts.shibuya-java-19 :as shja]
+            [posts.fig-sidecar :as figs]
             [resume.utils :as ru]))
 
 (def toc
@@ -20,12 +21,13 @@
                    [:a.blog-listing {:href "foobar"
                                      :id (:url %)} (:title %)]
                    " " (:created-at %)])
-         [cljtkyo4/clojure-tokyo-4
+         [figs/checkout-fig-sidecar
+          cljtkyo4/clojure-tokyo-4
           pp/peek-pop
           cljs-talk/gave-cljs-talk
           shja/shibuya-java-19
           cljs-website/made-cljs-website])]
-   [:div {:id "post-content-div-container"}
+   [:div {:id  "post-content-div-container"}
     [:div {:id "post-content-div"}]
     [:a {:href "foobar"
          :id "posts-back-to-content-link"}

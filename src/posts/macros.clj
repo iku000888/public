@@ -1,11 +1,11 @@
 (ns posts.macros
-  (:require [clojure.java.io :as io]
-            [cljfmt.core :as cc]
-            [clojure.string :as s]
+  (:require [cljfmt.core :as cc]
+            [clojure.java.io :as io]
+            [clojure.string :as str]
             [hiccup2.core :as h]
-            [resume.macros :refer [p]]
-            [clojure.string :as str])
-  (:import java.io.File))
+            [resume.macros :refer [p]])
+  (:import io.github.gitbucket.markedj.Marked
+           java.io.File))
 
 (defn pre-render-hiccup [content]
   (-> content
@@ -17,7 +17,7 @@
       str
       (str/replace (str :p.m/nl) "\n")
       cc/reformat-string
-      (s/split #"\n")
+      (str/split #"\n")
       ;;Complected with style, fix later!
       (->> (map (fn [s] [:pre.no-margin s]))
            (into [:code.boxed.indent-3em]))))
@@ -33,14 +33,20 @@
   [content _]
   (pre-render-hiccup content))
 
-(defmethod render-content :md)
+(defmethod render-content :md
+  [path-to-md _]
+  (-> path-to-md
+      slurp
+      Marked/marked))
 
 (defmacro defpost
-  [var-name {:as opts :keys [disp-title ts]} content]
+  [var-name
+   {:as opts :keys [disp-title ts renderer]}
+   content]
   (when-not (.exists (io/file "posts"))
     (.mkdir (File. "posts")))
   (spit (io/file "posts" (str var-name))
-        (render-content (eval content) nil)
+        (render-content (eval content) renderer)
         #_(pre-render-hiccup (eval content)))
   `(def ~(symbol (str var-name))
      {:title ~(str disp-title)
