@@ -3,8 +3,8 @@
                    [resume.macros :refer [p]]))
 
 (defpost gave-cljs-talk
-  "Gave a short talk about ClojureScript"
-  "2017-06-25"
+  {:disp-title "Gave a short talk about ClojureScript"
+   :ts "2017-06-25"}
   [:div
    [:h2 "Gave a short talk about ClojureScript"]
    [:p.blog-post

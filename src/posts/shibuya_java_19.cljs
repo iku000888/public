@@ -3,8 +3,8 @@
                    [resume.macros :refer [p]]))
 
 (defpost shibuya-java-19
-  "Attended Shibuya Java #19"
-  "2017-06-21"
+  {:disp-title "Attended Shibuya Java #19"
+   :ts "2017-06-21"}
   [:div
    [:h2 "Attended Shibuya Java #19"]
    [:p.blog-post

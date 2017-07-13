@@ -2,8 +2,8 @@
   (:require-macros [posts.macros :refer [defpost code->hiccup]]
                    [resume.macros :refer [p]]))
 (defpost made-cljs-website
-  "Making this website"
-  "2017-06-14"
+  {:disp-title "Making this website"
+   :ts "2017-06-14"}
   [:div
    [:h2 "Technical Details of this Site"]
    [:p.blog-post

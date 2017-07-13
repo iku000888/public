@@ -26,12 +26,22 @@
  (let [x 4] :p.m/nl
       (* x x)))
 
+(defmulti render-content
+  (fn [_ renderer] renderer))
 
-(defmacro defpost [var-name disp-title ts content]
+(defmethod render-content :default
+  [content _]
+  (pre-render-hiccup content))
+
+(defmethod render-content :md)
+
+(defmacro defpost
+  [var-name {:as opts :keys [disp-title ts]} content]
   (when-not (.exists (io/file "posts"))
     (.mkdir (File. "posts")))
   (spit (io/file "posts" (str var-name))
-        (pre-render-hiccup (eval content)))
+        (render-content (eval content) nil)
+        #_(pre-render-hiccup (eval content)))
   `(def ~(symbol (str var-name))
      {:title ~(str disp-title)
       :created-at ~ts

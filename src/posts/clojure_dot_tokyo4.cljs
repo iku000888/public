@@ -3,8 +3,8 @@
                    [resume.macros :refer [p]]))
 
 (defpost clojure-tokyo-4
-  "Attended clojure.tokyo #4"
-  "2017-07-09"
+  {:disp-title "Attended clojure.tokyo #4"
+   :ts "2017-07-09"}
   [:div
    [:h2 "Attended clojure.tokyo #4"]
 

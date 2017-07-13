@@ -3,8 +3,8 @@
                    [resume.macros :refer [p]]))
 
 (defpost peek-pop
-  "peek, pop and IPersistentStack"
-  "2017-06-30"
+  {:disp-title "peek, pop and IPersistentStack"
+   :ts "2017-06-30"}
   [:div
    [:h2 "peek, pop and IPersistentStack"]
 
