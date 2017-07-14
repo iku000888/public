@@ -1,4 +1,26 @@
 ;; Launch good ole fiddle
+
+(def fiddles
+  ["re-frame"
+   ;;"reagent"
+   "raspo"])
+
+(doseq [fiddle-ns fiddles]
+  (b/build "src"
+           {:main (symbol (str "fiddles." fiddle-ns))
+            :output-to (str "fiddles/" fiddle-ns ".js")
+            :output-dir "fiddles"
+            :optimizations :advanced
+            :verbose true}))
+
+(comment
+  (require '[cljs.build.api :as b])
+  (b/build "src"
+           {:main 'fiddles.re-frame
+            :output-to "out/re-frame.js"
+            :output-dir "out"
+            :verbose true}))
+
 #_(do (require '[cljs.build.api :as b])
       (b/watch "src"
                {:main 'fiddles.core
@@ -32,6 +54,5 @@
 
 (alter-var-root #'system c/start)
 (alter-var-root #'system c/stop)
-
 
 (sys/cljs-repl (:figwheel-system system))
