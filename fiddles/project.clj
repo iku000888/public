@@ -4,7 +4,9 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.671"]
                  [reagent "0.7.0"]
-                 [re-frame "0.9.4" :exclusions [reagent]]]
+                 [re-frame "0.9.4" :exclusions [reagent]]
+                 [datascript "0.16.1"]
+                 [respo "0.5.14"]]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :plugins [[lein-npm "0.6.2"]]
   :npm {:dependencies [[source-map-support "0.4.0"]]}
