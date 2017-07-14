@@ -1,10 +1,12 @@
 ;; Launch good ole fiddle
 
+;;TODO: -> cljc
 (def fiddles
   ["re-frame"
-   ;;"reagent"
+   "reagent-sample"
    "raspo"])
 
+;;advance compile all fiddle name spaces
 (doseq [fiddle-ns fiddles]
   (b/build "src"
            {:main (symbol (str "fiddles." fiddle-ns))
@@ -16,8 +18,8 @@
 (comment
   (require '[cljs.build.api :as b])
   (b/build "src"
-           {:main 'fiddles.re-frame
-            :output-to "out/re-frame.js"
+           {:main 'fiddles.core
+            :output-to "out/fiddles.js"
             :output-dir "out"
             :verbose true}))
 

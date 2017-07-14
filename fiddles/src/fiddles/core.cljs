@@ -9,7 +9,7 @@
     (js/postscribe
      "#fiddle-script"
      (str "<script src="
-          "out/" value ".js"
+          "fiddles/" value ".js"
           "></script>"))
     (o/set js/location "hash" value)))
 
@@ -23,7 +23,7 @@
 
     ;;TODO: figure out how to automatically link with the output file name
     [:option "re-frame"]
-    [:option "reagent"]
+    [:option "reagent-sample"]
     [:option "raspo"]]
    [:div#fiddle-script]])
 

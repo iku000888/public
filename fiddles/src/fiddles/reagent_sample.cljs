@@ -1,4 +1,4 @@
-(ns fiddles.reagent
+(ns fiddles.reagent-sample
   (:require [reagent.core :as r])
   (:import [goog.i18n DateTimeFormat DateTimeParse]
            goog.ui.InputDatePicker))
