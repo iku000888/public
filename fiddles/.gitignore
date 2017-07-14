@@ -5,7 +5,12 @@ pom.xml
 /out/
 /release/
 /target/
+/fiddles/*
+.nrepl-port
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
 .repl*
+
+
+!/fiddles/*.js
