@@ -19,6 +19,7 @@
   (require '[cljs.build.api :as b])
   (b/build "src"
            {:main 'fiddles.core
+            :optimizations :advanced
             :closure-defines {'goog.DEBUG false}
             :output-to "out/fiddles.js"
             :output-dir "out"
