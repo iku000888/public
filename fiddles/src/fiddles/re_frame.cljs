@@ -4,12 +4,12 @@
 
 (defn re-frame-main []
   [:div
-   "This is an re-frame app"
+   "This is an re-frame app example"
    [:hr]
-   (repeat
-    (or @(rf/subscribe [:times]) 1)
-    [:div {:style {:margin "2em"}} @(rf/subscribe [:test-sub])])
-
+   (doall
+    (for [idx (range (or @(rf/subscribe [:times]) 1))]
+      ^{:key idx}
+      [:div {:style {:margin "2em"}} @(rf/subscribe [:test-sub]) " " idx]))
    [:br]
    [:button {:on-click #(rf/dispatch [::inc])}
     "click me!!!"]
@@ -42,6 +42,9 @@
  (fn [db [_ new-val]]
    (update db :times inc)))
 
-(rf/dispatch [::init])
+(defonce foo
+  (do (rf/dispatch [::init])
+      true))
+
 (r/render [re-frame-main]
           (.getElementById js/document "app"))

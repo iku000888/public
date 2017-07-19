@@ -2,7 +2,7 @@ pom.xml
 *jar
 /lib/
 /classes/
-/out/
+/out/*
 /release/
 /target/
 /fiddles/*
@@ -14,3 +14,4 @@ pom.xml
 
 
 !/fiddles/*.js
+!/out/fiddles.js

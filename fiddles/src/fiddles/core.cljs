@@ -1,16 +1,21 @@
 (ns fiddles.core
   (:require [clojure.string :as str]
             [goog.object :as o]
-            [re-frame.core :as rf]
             [reagent.core :as r]))
 
 (defn mount-external-js [value]
   (when (seq value)
-    (js/postscribe
-     "#fiddle-script"
-     (str "<script src="
-          "fiddles/" value ".js"
-          "></script>"))
+    (if js/goog.DEBUG
+      (js/postscribe
+       "#fiddle-script"
+       (str "<script src="
+            "fiddles/" value ".js"
+            "></script>"))
+      (.appendChild (o/get js/document "body")
+                    (doto (.createElement js/document "script")
+                      (o/set "src" (str "fiddles/" value ".js"))
+                      (o/set "async" true)))
+      #_(js/alert "dev mode is false yo!!!"))
     (o/set js/location "hash" value)))
 
 (defn main []
@@ -46,4 +51,4 @@
           (.getElementById js/document "app"))
 
 (o/set js/window "onload"
-       #(mount-external-js (str/replace js/location.hash "#" "")))
+       #(mount-external-js (str/replace (o/get js/location "hash") "#" "")))

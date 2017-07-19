@@ -19,8 +19,10 @@
   (require '[cljs.build.api :as b])
   (b/build "src"
            {:main 'fiddles.core
+            :closure-defines {'goog.DEBUG false}
             :output-to "out/fiddles.js"
             :output-dir "out"
+            :watch-fn #(println "done building")
             :verbose true}))
 
 #_(do (require '[cljs.build.api :as b])
@@ -40,6 +42,7 @@
                               :figwheel true
                               :compiler
                               {:main fiddles.core
+                               :closure-defines {goog.DEBUG true}
                                :asset-path "out",
                                :output-to "out/fiddles.js",
                                :output-dir "out",
