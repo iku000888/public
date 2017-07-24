@@ -64,6 +64,14 @@
    [:p (p A class where teams of "3" students build a robot that navigates to a goal whilst shooting ping pong "balls,"
           and make those robots compete. My team got second place out of "17" teams. I was mainly responsible for coding and sensor integration.)]])
 
+(def clj-site-ja
+  [:div.proj-content
+   [:h3 "Clojure Site Translation Project"
+    [:code  "(->Japanese)"]]
+   [:p (p Contributing Japanese translation effort.)]
+   [:p [:a {:href "https://github.com/japan-clojurians/clojure-site-ja"}
+        "Project Site"]]])
+
 (def projects
   [:div
 
@@ -71,6 +79,7 @@
 
    pc-auto-save
    anpi2
+   clj-site-ja
    formative
    dental-robotics
    Mechatronisc]
