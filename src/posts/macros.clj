@@ -5,6 +5,9 @@
             [hiccup2.core :as h]
             [resume.macros :refer [p]])
   (:import io.github.gitbucket.markedj.Marked
+           org.asciidoctor.Asciidoctor
+           org.asciidoctor.Asciidoctor$Factory
+           java.util.HashMap
            java.io.File))
 
 (defn pre-render-hiccup [content]
@@ -38,6 +41,12 @@
   (-> path-to-md
       slurp
       Marked/marked))
+
+(defmethod render-content :adoc
+  [path-to-adoc _]
+  (let [inst (Asciidoctor$Factory/create)
+        src  (slurp (io/file path-to-adoc))]
+    (.convert inst src (HashMap.))))
 
 (defmacro defpost
   [var-name

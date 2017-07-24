@@ -3,6 +3,7 @@
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.562"]
+                 [org.asciidoctor/asciidoctorj "1.5.5"]
                  [crate "0.2.4"]
                  [garden "1.3.2"]
                  [hiccup "2.0.0-alpha1"]
