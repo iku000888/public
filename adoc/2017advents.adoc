@@ -1,0 +1,9 @@
+= 2017 Advent Calender Bucket List
+
+== ClojureScript for FrontEnd Development
+. Rum
+. Reagent
+
+== 2017 Best 25 Clojure Talks
+
+== Datomic
