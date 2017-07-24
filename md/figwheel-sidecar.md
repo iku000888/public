@@ -42,7 +42,7 @@ The project README has everything [figwheel-sidecar](https://github.com/bhauman/
 ;Figwheel: Stopping Websocket Server
 ```
 
-## Extra：How leiningen plugins ought to be built
+## Extra: How leiningen plugins ought to be built
 For reasons mentioned in the beggining, it is recommended to first build a library that can be used from the repl and then provide a thin layer that provides the leiningen plugin.
 
 If one builds a plugin that can only be used from leiningen, you will get an [issue](https://github.com/JonyEpsilon/gorilla-repl/issues/272) from a prominent figure in the Clojure world for clients that are locked into maven.

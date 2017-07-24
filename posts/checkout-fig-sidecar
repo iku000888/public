@@ -44,7 +44,7 @@
 ;Figwheel: Stopped watching build - example
 ;Figwheel: Stopping Websocket Server
 </code></pre> 
-<h2 id="extra-how-leiningen-plugins-ought-to-be-built">Extra：How leiningen plugins ought to be built</h2> 
+<h2 id="extra-how-leiningen-plugins-ought-to-be-built">Extra: How leiningen plugins ought to be built</h2> 
 <p>For reasons mentioned in the beggining, it is recommended to first build a library that can be used from the repl and then provide a thin layer that provides the leiningen plugin.</p> 
 <p>If one builds a plugin that can only be used from leiningen, you will get an <a href="https://github.com/JonyEpsilon/gorilla-repl/issues/272">issue</a> from a prominent figure in the Clojure world for clients that are locked into maven.</p> 
 <p>Sounds like a good idea to keep that in mind if you are ever going to build a lein plugin :)</p>
