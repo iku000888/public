@@ -1,9 +1,100 @@
 = 2017 Advent Calender Bucket List
 
 == ClojureScript for FrontEnd Development
-. Rum
+. https://github.com/roman01la/scrum[scrum]
 . Reagent
+. Rum
+. https://github.com/Day8/re-frame[re-frame]
+. https://github.com/omcljs/om/[om]
+. https://github.com/chpill/re-frankenstein[re-frankenstein]
+. https://github.com/CoNarrative/precept[precept]
+. https://github.com/mpdairy/posh[posh]
+. https://github.com/binaryage/cljs-devtools[cljs-dev-tools]
+. https://github.com/binaryage/dirac[dirac]
+. https://github.com/thheller/shadow-cljs[shadow-cljs]
+. https://github.com/Day8/re-com[re-com]
+. https://github.com/Respo/respo[respo]
+. https://github.com/priornix/antizer[antizer]
+. http://cljsjs.github.io/[cljsjs]
+. calvin
+. lumo
+. https://github.com/r0man/sablono[sablono]
+. Testing your ClojureScript code
+. Spec in ClojureScript
+. https://github.com/levand/quiescent[quiescent]
+. Datascript in the browser
+. Synchronizing callbacks with atoms
+
+== Clojure Super Heros
+. Rich Hickey
+. David Nolen
+. Alex Miller
+. Ramsey Nasser
+. Bozhidar Bastov
+. Technomancy
+. James Reeves
+. Maria Geller
+. Bruce Hauman
+. Antonio Monteiro
+. Mike Fikes
+. Dmitry Sotnikov
+. Mark and Alex Engelberg
+. Nikita Prokopov
+. Malcolm Sparks
+. Chas Emerik
+. Zach Tellman
+. Luke Vanderhart
+. Sturart Halloway
+. Carin Meier
+. Daniel Compton
+. Stuart Sierra
+. Tim Baldridge
+. Erik Normand
+. Arne Brasseur
 
 == 2017 Best 25 Clojure Talks
 
 == Datomic
+. License
+. Datomic Console
+. REST API
+. Dev mode (dev)
+. Installing on a SQL database (sql)
+. Installing on DynamoDB (ddb)
+. Installing on Cassandra (cass)
+. http://docs.datomic.com/legacy-storage.html[Legacy Storages]
+. Logging
+. Pull syntax
+. Query
+. Schema
+. Transactor
+. Architecture
+. datomic-free jar
+. Community
+. vvvvalval
+. Compare with DataScript
+. Chimera-datomic-peer
+. Docker?
+
+
+== Arachne
+. Status
+. Community
+. Core
+. How Arachne uses Datomic/Datascript inside
+. Arachne in the repl
+. Running the app from command line
+. Uberjar?
+. Asset Pipeline
+. Arachne-cljs
+. Arachne-pedestal-assets
+. Arachne-figwheel
+. Arachne-sass
+. Arachne-proj-gen
+. Chimera
+. Chimera-datomic-peer
+. HTTP module
+. Pedestal module
+. Modules overview
+. Hello module
+. Compare with Duct
