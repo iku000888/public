@@ -1,0 +1,73 @@
+(ns clara-rules.core
+  (:require [clara.rules :as cr :refer [defrule
+                                        fire-rules
+                                        insert
+                                        retract
+                                        mk-session
+                                        defsession
+                                        ]]))
+
+(defrecord Num  [number])
+
+(defrecord Str [string])
+
+(defprotocol IPerhapsEven
+  (is-an-even-number [this]))
+
+(defprotocol IFoo
+  (test-foo [this]))
+
+(deftype Foo []
+  IFoo
+  (test-foo [thi] true))
+
+(defrule is-foo
+  [Foo (test-foo tis)]
+  => (println "is a foo"))
+
+(-> (mk-session)
+    (insert (Foo.))
+    (fire-rules))!
+
+
+(defrule is-even
+  [Num (= number 2)]
+  =>
+  (println "even number!"))
+
+(defrule perhaps-even
+  [IPerhapsEven (is-an-even-number this)]
+  =>
+  (println "its saying it is an even number!"))
+
+(defsession foosession )
+
+(-> (mk-session)
+    (insert (->Num 4))
+    (fire-rules))
+
+(defrule is-important
+  "Find important support requests."
+  [SupportRequest (= :high level)]
+  =>
+  (println "High support requested!"))
+
+(defrule notify-client-rep
+  "Find the client representative and send a notification of a support request."
+  [SupportRequest (= ?client client)]
+  [ClientRepresentative (= ?client client) (= ?name name)] ; Join via the ?client binding.
+  =>
+  (println "Notify" ?name "that"  ?client "has a new support request!"))
+
+
+
+
+
+
+
+;; Run the rules! We can just use Clojure's threading macro to wire things up.
+(let [happened (atom [])]
+  (-> (mk-session)
+      (insert (->ClientRepresentative "Alice" "Acme")
+              (->SupportRequest "Acme" :high))
+      (fire-rules)))
