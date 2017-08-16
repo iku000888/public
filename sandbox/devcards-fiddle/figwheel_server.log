@@ -1,0 +1,1186 @@
+[0mCompiling "resources/public/js/compiled/devcards_fiddle_devcards.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:27  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-doc[0m
+
+  [36m24[0m  [36m(defn on-click [ratom][0m
+  [36m25[0m  [36m  (swap! ratom update-in [:count] inc))[0m
+  [36m26[0m  [36m[0m
+  [33m27[0m  [1m(defcard-doc[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-doc[0m
+  [36m28[0m  [36m  "[0m
+  [36m29[0m  [36m## Rendering Reagent components[0m
+  [36m30[0m  [36mNote: The following examples assume a namespace that looks like this:[0m
+  [36m31[0m  [36m```clojure[0m
+  [36m32[0m  [36m(ns xxx[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:13  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/jamming[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m            ^--- Use of undeclared Var devcards-fiddle.core/jamming[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:133  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+  [36m131[0m  [36m     "Increment"]]])[0m
+  [36m132[0m  [36m[0m
+  [33m133[0m  [1m(defcard-rg counter1[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m134[0m  [36m  "[0m
+  [36m135[0m  [36m## Counter1 (Basic)[0m
+  [36m136[0m  [36mThe simplest way to create a reagent devcard is to pass the `defcard-rg` macro a single argument:[0m
+  [36m137[0m  [36m1) a reagent component (i.e., `counter1`) wrapped by square brackets:[0m
+  [36m138[0m  [36m```clojure[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:163  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+  [36m161[0m  [36m     "Increment"]]])[0m
+  [36m162[0m  [36m[0m
+  [33m163[0m  [1m(defcard-rg counter2[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m164[0m  [36m  "[0m
+  [36m165[0m  [36m## Counter 2 (Displaying the state of reagent atom/cursor)[0m
+  [36m166[0m  [36mHowever, wouldn't it be nice to see the state of our component? To[0m
+  [36m167[0m  [36maccomplish this, we can pass the following arguments to the defcard[0m
+  [36m168[0m  [36mmacro:[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:204  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+  [36m202[0m  [36m     "Increment"]]])[0m
+  [36m203[0m  [36m[0m
+  [33m204[0m  [1m(defcard-rg counter3[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m205[0m  [36m  "[0m
+  [36m206[0m  [36m## Counter 3 (Passing in an argument to the reagent component)[0m
+  [36m207[0m  [36mAt this point, you may be wondering, *how do we pass in arguments to[0m
+  [36m208[0m  [36mthe reagent component itself?* All you have to do is pass in your[0m
+  [36m209[0m  [36mreagent component along with it's args.[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:243  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+  [36m240[0m  [36m   [:div [:button {:on-click #(on-click ratom)}[0m
+  [36m241[0m  [36m          button-text]]])[0m
+  [36m242[0m  [36m[0m
+  [33m243[0m  [1m(defcard-rg counter4[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m244[0m  [36m  "[0m
+  [36m245[0m  [36m## Counter 4 (Passing in multiple arguments to the reagent component)[0m
+  [36m246[0m  [36mWe can pass in an arbitray number of arguments to our reagent component if we wrap it in square brackets.[0m
+  [36m247[0m  [36m```clojure[0m
+  [36m248[0m  [36m(defn on-click [ratom][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:13  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/isolating-state[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m            ^--- Use of undeclared Var devcards-fiddle.core/isolating-state[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- Use of undeclared Var reagent/atom[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/devcards_fiddle_devcards.js" in 0.872 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/devcards_out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/devcards_out/cljs_deps.js
+notifying browser that file changed:  resources/public/js/compiled/devcards_out/devcards_fiddle/core.js
+[0mCompiling "resources/public/js/compiled/devcards_fiddle_devcards.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:27  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-doc[0m
+
+  [36m24[0m  [36m(defn on-click [ratom][0m
+  [36m25[0m  [36m  (swap! ratom update-in [:count] inc))[0m
+  [36m26[0m  [36m[0m
+  [33m27[0m  [1m(defcard-doc[0m
+  [0m  [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-doc[0m
+  [36m28[0m  [36m  "[0m
+  [36m29[0m  [36m## Rendering Reagent components[0m
+  [36m30[0m  [36mNote: The following examples assume a namespace that looks like this:[0m
+  [36m31[0m  [36m```clojure[0m
+  [36m32[0m  [36m(ns xxx[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:13  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/jamming[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m            ^--- Use of undeclared Var devcards-fiddle.core/jamming[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:133  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+  [36m131[0m  [36m     "Increment"]]])[0m
+  [36m132[0m  [36m[0m
+  [33m133[0m  [1m(defcard-rg counter1[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m134[0m  [36m  "[0m
+  [36m135[0m  [36m## Counter1 (Basic)[0m
+  [36m136[0m  [36mThe simplest way to create a reagent devcard is to pass the `defcard-rg` macro a single argument:[0m
+  [36m137[0m  [36m1) a reagent component (i.e., `counter1`) wrapped by square brackets:[0m
+  [36m138[0m  [36m```clojure[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:163  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+  [36m161[0m  [36m     "Increment"]]])[0m
+  [36m162[0m  [36m[0m
+  [33m163[0m  [1m(defcard-rg counter2[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m164[0m  [36m  "[0m
+  [36m165[0m  [36m## Counter 2 (Displaying the state of reagent atom/cursor)[0m
+  [36m166[0m  [36mHowever, wouldn't it be nice to see the state of our component? To[0m
+  [36m167[0m  [36maccomplish this, we can pass the following arguments to the defcard[0m
+  [36m168[0m  [36mmacro:[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:204  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+  [36m202[0m  [36m     "Increment"]]])[0m
+  [36m203[0m  [36m[0m
+  [33m204[0m  [1m(defcard-rg counter3[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m205[0m  [36m  "[0m
+  [36m206[0m  [36m## Counter 3 (Passing in an argument to the reagent component)[0m
+  [36m207[0m  [36mAt this point, you may be wondering, *how do we pass in arguments to[0m
+  [36m208[0m  [36mthe reagent component itself?* All you have to do is pass in your[0m
+  [36m209[0m  [36mreagent component along with it's args.[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:243  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+  [36m240[0m  [36m   [:div [:button {:on-click #(on-click ratom)}[0m
+  [36m241[0m  [36m          button-text]]])[0m
+  [36m242[0m  [36m[0m
+  [33m243[0m  [1m(defcard-rg counter4[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m244[0m  [36m  "[0m
+  [36m245[0m  [36m## Counter 4 (Passing in multiple arguments to the reagent component)[0m
+  [36m246[0m  [36mWe can pass in an arbitray number of arguments to our reagent component if we wrap it in square brackets.[0m
+  [36m247[0m  [36m```clojure[0m
+  [36m248[0m  [36m(defn on-click [ratom][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:2  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/defcard-rg[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var devcards-fiddle.core/defcard-rg[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:13  ----[0m
+
+  [1mUse of undeclared Var devcards-fiddle.core/isolating-state[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m            ^--- Use of undeclared Var devcards-fiddle.core/isolating-state[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- Use of undeclared Var reagent/atom[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/devcards_fiddle_devcards.js" in 0.813 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/devcards_out/devcards_fiddle/core.js
+[0mCompiling "resources/public/js/compiled/devcards_fiddle_devcards.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:55  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m51[0m  [36m")[0m
+  [36m52[0m  [36m[0m
+  [36m53[0m  [36m(defcard reagent-no-help[0m
+  [36m54[0m  [36m[0m
+  [33m55[0m  [1m  (reagent/as-element [:h1 "Reagent example"]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m56[0m  [36m[0m
+  [36m57[0m  [36m(defcard[0m
+  [36m58[0m  [36m  "This will also work with Reagent components[0m
+  [36m59[0m  [36m```clojure[0m
+  [36m60[0m  [36m(defn reagent-component-example [][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:72  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/as-element[0m
+
+  [36m68[0m  [36m(defn reagent-component-example [][0m
+  [36m69[0m  [36m  [:div "hey there"])[0m
+  [36m70[0m  [36m[0m
+  [36m71[0m  [36m(defcard reagent-component[0m
+  [33m72[0m  [1m  (reagent/as-element [reagent-component-example]))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reagent/as-element[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(defcard[0m
+  [36m75[0m  [36m  "# Devcards helpers[0m
+  [36m76[0m  [36mDevcards provides two macros to help you use reagent.[0m
+  [36m77[0m  [36m* `devcards.core/reagent`[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:109  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m105[0m  [36m```[0m
+  [36m106[0m  [36mAlright let's look at some more examples:[0m
+  [36m107[0m  [36m")[0m
+  [36m108[0m  [36m[0m
+  [33m109[0m  [1m(defcard-rg jamming[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m110[0m  [36m  "You can pass straight Reagent hiccup markup to `devcard-rg` like so:[0m
+  [36m111[0m  [36m   ```clojure[0m
+  [36m112[0m  [36m   (defcard-rg jamming[0m
+  [36m113[0m  [36m     [:div {:style {:border \"10px solid blue\" :padding \"20px\"}}[0m
+  [36m114[0m  [36m       [:h1  \"Composing Reagent Hiccup on the fly\"][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:125  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m123[0m  [36m;; counter 1[0m
+  [36m124[0m  [36m[0m
+  [33m125[0m  [1m(defonce counter1-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m126[0m  [36m[0m
+  [36m127[0m  [36m(defn counter1 [][0m
+  [36m128[0m  [36m  [:div "Current count: " (@counter1-state :count)[0m
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:133  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+  [36m131[0m  [36m     "Increment"]]])[0m
+  [36m132[0m  [36m[0m
+  [33m133[0m  [1m(defcard-rg counter1[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m134[0m  [36m  "[0m
+  [36m135[0m  [36m## Counter1 (Basic)[0m
+  [36m136[0m  [36mThe simplest way to create a reagent devcard is to pass the `defcard-rg` macro a single argument:[0m
+  [36m137[0m  [36m1) a reagent component (i.e., `counter1`) wrapped by square brackets:[0m
+  [36m138[0m  [36m```clojure[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:133  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m129[0m  [36m   [:div[0m
+  [36m130[0m  [36m    [:button {:on-click #(on-click counter1-state)}[0m
+  [36m131[0m  [36m     "Increment"]]])[0m
+  [36m132[0m  [36m[0m
+  [33m133[0m  [1m(defcard-rg counter1[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m134[0m  [36m  "[0m
+  [36m135[0m  [36m## Counter1 (Basic)[0m
+  [36m136[0m  [36mThe simplest way to create a reagent devcard is to pass the `defcard-rg` macro a single argument:[0m
+  [36m137[0m  [36m1) a reagent component (i.e., `counter1`) wrapped by square brackets:[0m
+  [36m138[0m  [36m```clojure[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:155  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m151[0m  [36m  [counter1])[0m
+  [36m152[0m  [36m[0m
+  [36m153[0m  [36m;; counter 2[0m
+  [36m154[0m  [36m[0m
+  [33m155[0m  [1m(defonce counter2-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m156[0m  [36m[0m
+  [36m157[0m  [36m(defn counter2 [][0m
+  [36m158[0m  [36m  [:div "Current count: " (@counter2-state :count)[0m
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:163  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+  [36m161[0m  [36m     "Increment"]]])[0m
+  [36m162[0m  [36m[0m
+  [33m163[0m  [1m(defcard-rg counter2[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m164[0m  [36m  "[0m
+  [36m165[0m  [36m## Counter 2 (Displaying the state of reagent atom/cursor)[0m
+  [36m166[0m  [36mHowever, wouldn't it be nice to see the state of our component? To[0m
+  [36m167[0m  [36maccomplish this, we can pass the following arguments to the defcard[0m
+  [36m168[0m  [36mmacro:[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:163  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m159[0m  [36m   [:div[0m
+  [36m160[0m  [36m    [:button {:on-click #(on-click counter2-state)}[0m
+  [36m161[0m  [36m     "Increment"]]])[0m
+  [36m162[0m  [36m[0m
+  [33m163[0m  [1m(defcard-rg counter2[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m164[0m  [36m  "[0m
+  [36m165[0m  [36m## Counter 2 (Displaying the state of reagent atom/cursor)[0m
+  [36m166[0m  [36mHowever, wouldn't it be nice to see the state of our component? To[0m
+  [36m167[0m  [36maccomplish this, we can pass the following arguments to the defcard[0m
+  [36m168[0m  [36mmacro:[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:196  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m193[0m  [36m;; counter 3[0m
+  [36m194[0m  [36m[0m
+  [36m195[0m  [36m[0m
+  [33m196[0m  [1m(defonce counter3-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m(defn counter3 [ratom][0m
+  [36m199[0m  [36m  [:div "Current count: " (@ratom :count)[0m
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:204  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+  [36m202[0m  [36m     "Increment"]]])[0m
+  [36m203[0m  [36m[0m
+  [33m204[0m  [1m(defcard-rg counter3[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m205[0m  [36m  "[0m
+  [36m206[0m  [36m## Counter 3 (Passing in an argument to the reagent component)[0m
+  [36m207[0m  [36mAt this point, you may be wondering, *how do we pass in arguments to[0m
+  [36m208[0m  [36mthe reagent component itself?* All you have to do is pass in your[0m
+  [36m209[0m  [36mreagent component along with it's args.[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:204  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m200[0m  [36m   [:div[0m
+  [36m201[0m  [36m    [:button {:on-click #(on-click ratom)}[0m
+  [36m202[0m  [36m     "Increment"]]])[0m
+  [36m203[0m  [36m[0m
+  [33m204[0m  [1m(defcard-rg counter3[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m205[0m  [36m  "[0m
+  [36m206[0m  [36m## Counter 3 (Passing in an argument to the reagent component)[0m
+  [36m207[0m  [36mAt this point, you may be wondering, *how do we pass in arguments to[0m
+  [36m208[0m  [36mthe reagent component itself?* All you have to do is pass in your[0m
+  [36m209[0m  [36mreagent component along with it's args.[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:234  column:26  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m232[0m  [36m;; counter 4[0m
+  [36m233[0m  [36m[0m
+  [33m234[0m  [1m(defonce counter4-state (reagent/atom {:count 0}))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var reagent/atom[0m
+  [36m235[0m  [36m[0m
+  [36m236[0m  [36m(defn counter4 [ratom[0m
+  [36m237[0m  [36m                {:keys [title button-text]}][0m
+  [36m238[0m  [36m  [:div [:h3 title][0m
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:243  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+  [36m240[0m  [36m   [:div [:button {:on-click #(on-click ratom)}[0m
+  [36m241[0m  [36m          button-text]]])[0m
+  [36m242[0m  [36m[0m
+  [33m243[0m  [1m(defcard-rg counter4[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m244[0m  [36m  "[0m
+  [36m245[0m  [36m## Counter 4 (Passing in multiple arguments to the reagent component)[0m
+  [36m246[0m  [36mWe can pass in an arbitray number of arguments to our reagent component if we wrap it in square brackets.[0m
+  [36m247[0m  [36m```clojure[0m
+  [36m248[0m  [36m(defn on-click [ratom][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:243  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m239[0m  [36m   [:div "Current count: " (@ratom :count)][0m
+  [36m240[0m  [36m   [:div [:button {:on-click #(on-click ratom)}[0m
+  [36m241[0m  [36m          button-text]]])[0m
+  [36m242[0m  [36m[0m
+  [33m243[0m  [1m(defcard-rg counter4[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m244[0m  [36m  "[0m
+  [36m245[0m  [36m## Counter 4 (Passing in multiple arguments to the reagent component)[0m
+  [36m246[0m  [36mWe can pass in an arbitray number of arguments to our reagent component if we wrap it in square brackets.[0m
+  [36m247[0m  [36m```clojure[0m
+  [36m248[0m  [36m(defn on-click [ratom][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:272  column:1  ----[0m
+
+  [1mUse of undeclared Var reagent.core/as-element[0m
+
+  [36m268[0m  [36m  counter4-state[0m
+  [36m269[0m  [36m  {:inspect-data true}[0m
+  [36m270[0m  [36m  )[0m
+  [36m271[0m  [36m[0m
+  [33m272[0m  [1m(defcard-rg isolating-state[0m
+  [0m   [0m  [33m^--- Use of undeclared Var reagent.core/as-element[0m
+  [36m273[0m  [36m  "## Isolating state[0m
+  [36m274[0m  [36m  You may only want to have state available to your example code. This is accomplished in the following example:[0m
+  [36m275[0m  [36m  ```clojure[0m
+  [36m276[0m  [36m  (defcard-rg isolating-state[0m
+  [36m277[0m  [36m    (fn [data-atom _][0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mNo such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or JavaScript source providing ""[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/devcards_fiddle/core.cljs   line:287  column:4  ----[0m
+
+  [1mUse of undeclared Var reagent/atom[0m
+
+  [36m283[0m  [36m"[0m
+  [36m284[0m  [36m  (fn [data-atom _][0m
+  [36m285[0m  [36m    [counter4 data-atom {:title "Counter 5"[0m
+  [36m286[0m  [36m                         :button-text "increment isolated state"}])[0m
+  [33m287[0m  [1m  (reagent/atom {:count 0}) ; <-- intial ratom[0m
+  [0m   [0m  [33m   ^--- Use of undeclared Var reagent/atom[0m
+  [36m288[0m  [36m  {:inspect-data true})[0m
+
+[36m----  Compiler Warning : Please see src/devcards_fiddle/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/compiled/devcards_fiddle_devcards.js" in 0.996 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/devcards_out/devcards_fiddle/core.js
+[0mCompiling "resources/public/js/compiled/devcards_fiddle_devcards.js" from ["src"]...[0m
+[31mFailed to compile "resources/public/js/compiled/devcards_fiddle_devcards.js" in 0.756 seconds.[0m
+[36m----  Could not Analyze  resources/public/js/compiled/devcards_out/reagent/impl/component.cljs  ----[0m
+
+  [1mNo such namespace: react, could not locate react.cljs, react.cljc, or JavaScript source providing "react" [0m
+
+[36m----  Analysis Error : Please see resources/public/js/compiled/devcards_out/reagent/impl/component.cljs  ----[0m
